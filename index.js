@@ -11,8 +11,7 @@ try
 	for(let i in chats)
 	{
 		let chat = chats[i].trim();
-		console.log(`https://api.telegram.org/bot${botApiKey}/sendMessage?chat_id=${chat}&text=${msg}`);
-		https.request(`https://api.telegram.org/bot${botApiKey}/sendMessage?chat_id=${chat}&text=${msg}`);
+		https.get(`https://api.telegram.org/bot${botApiKey}/sendMessage?chat_id=${chat}&text=${msg}`);
 	}
 }
 catch (error)
