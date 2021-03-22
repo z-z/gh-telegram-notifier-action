@@ -4,6 +4,8 @@ const https  = require('https');
 
 try
 {
+	console.log(github);
+
 	const botApiKey = core.getInput('botApiKey');
 	const chats     = (core.getInput('chats')).split(',');
 	const msg       = core.getInput('msg');
