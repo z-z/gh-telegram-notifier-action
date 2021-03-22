@@ -13,7 +13,7 @@ try
 	for(let i in chats)
 	{
 		let chat = chats[i].trim();
-		https.get(`https://api.telegram.org/bot${botApiKey}/sendMessage?chat_id=${chat}&text=${msg}`);
+		https.get(`https://api.telegram.org/bot${botApiKey}/sendMessage?chat_id=${chat}&text=${msg}&parse_mode=MarkdownV2`);
 	}
 }
 catch (error)
