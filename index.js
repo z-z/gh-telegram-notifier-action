@@ -6,7 +6,7 @@ try
 {
 	const botApiKey = core.getInput('botApiKey');
 	const chats     = (core.getInput('chats')).split(',');
-	const msg       = core.getInput('msg');
+	let msg         = core.getInput('msg');
 
 	msg = encodeURI(msg);
 
