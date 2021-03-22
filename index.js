@@ -5,11 +5,14 @@ const https  = require('https');
 try
 {
 	const botApiKey = core.getInput('botApiKey');
-	const chats     = (core.getInput('botApiKey')).split(',');
+	const chats     = (core.getInput('chats')).split(',');
 	const msg       = core.getInput('msg');
 
 	for(let i in chats)
-		https.request(`https://api.telegram.org/bot${botApiKey}/sendMessage?chat_id=${chats}&text=${msg}`);
+	{
+		let chat = chats[i].trim();
+		https.request(`https://api.telegram.org/bot${botApiKey}/sendMessage?chat_id=${chat}&text=${msg}`);
+	}
 }
 catch (error)
 {
