@@ -12,7 +12,7 @@ try
 	{
 		let chat = chats[i].trim();
 		console.log(`https://api.telegram.org/bot${botApiKey}/sendMessage?chat_id=${chat}&text=${msg}&parse_mode=MarkdownV2`);
-		https.get(`https://api.telegram.org/bot${botApiKey}/sendMessage?chat_id=${chat}&text=${msg}&parse_mode=MarkdownV2`);
+		https.get(`https://api.telegram.org/bot${botApiKey}/sendMessage?chat_id=${chat}&text=${encodeURI(msg)}&parse_mode=MarkdownV2`);
 	}
 }
 catch (error)
