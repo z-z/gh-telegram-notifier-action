@@ -1,13 +1,15 @@
 name: 'Hello World'
 description: 'Greet someone and record the time'
 inputs:
-	who-to-greet:  # id of input
-		description: 'Who to greet'
-		required: true
-		default: 'World'
-outputs:
-	time:
-		description: 'The time we greeted you'
+  botApiKey:
+    description: 'telegram bog api key'
+    required: true
+  chats:
+    description: 'chat ids string (splitted by symbol ",") for sending message'
+    required: true
+  msg:
+    description: 'Message for sending. Can use github action vars'
+    required: true
 runs:
-	using: 'node12'
-	main: 'index.js'
+  using: 'node12'
+  main: 'index.js'
