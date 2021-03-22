@@ -9,7 +9,7 @@ try
 	let msg         = core.getInput('msg');
 
 	msg = encodeURI(msg);
-	msg = msg.replace(/[\-\.]/gi, (x,y) => y ? y : '\\' + x);
+	msg = msg.replace(/[\-\.]/gi, (x,y) => '\\' + x);
 
 	console.log(msg);
 
