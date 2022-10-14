@@ -8,12 +8,8 @@ try
 	const chats     = (core.getInput('chats')).split(',');
 	let msg         = core.getInput('msg');
 
-	console.log(msg);
-
 	msg = encodeURI(msg);
 	msg = msg.replace(/(\[[^\][]*]\(http[^()]*\))|[_*[\]()~>#+=|{}.!-]/gi, (x,y) => y ? y : '\\' + x);
-
-	console.log(msg);
 
 	for(let i in chats)
 	{
